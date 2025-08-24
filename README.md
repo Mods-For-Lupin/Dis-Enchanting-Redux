@@ -1,3 +1,1 @@
-# Lupin-Template
-
-> Refer to [MultiLoader-Template](https://github.com/jaredlll08/MultiLoader-Template)
+![Banner](https://www.bisecthosting.com/images/CF/DisEnchanting_Table/BH_DT_header.webp)
