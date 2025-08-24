@@ -15,7 +15,7 @@ import java.util.function.BiConsumer;
 
 public class ModBlocks {
 
-    public static final Block DISENCHANTING_TABLE = new DisEnchantingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ENCHANTING_TABLE).mapColor(MapColor.COLOR_BLUE).setId(ResourceKey.create(Registries.BLOCK, DisEnchantingTable.identifier(Constants.MOD_ID))));
+    public static final Block DISENCHANTING_TABLE = new DisEnchantingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ENCHANTING_TABLE).mapColor(MapColor.COLOR_LIGHT_BLUE).setId(ResourceKey.create(Registries.BLOCK, DisEnchantingTable.identifier(Constants.MOD_ID))));
 
     public static void register(BiConsumer<Block, ResourceLocation> consumer) {
         consumer.accept(DISENCHANTING_TABLE, DisEnchantingTable.identifier(Constants.MOD_ID));
