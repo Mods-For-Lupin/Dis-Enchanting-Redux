@@ -1,5 +1,8 @@
 {
   "itemGroup.disenchantingTable": "Dis-Enchanting Table",
   "block.disenchanting_table.disenchanting_table": "Dis-Enchanting Table",
-  "item.disenchanting_table.disenchanting_table": "Dis-Enchanting Table"
+  "item.disenchanting_table.disenchanting_table": "Dis-Enchanting Table",
+
+  "text.disenchanting_table.manual_mode": "MODE: MANUAL -> AUTOMATIC",
+  "text.disenchanting_table.automatic_mode": "MODE: AUTOMATIC -> MANUAL"
 }
