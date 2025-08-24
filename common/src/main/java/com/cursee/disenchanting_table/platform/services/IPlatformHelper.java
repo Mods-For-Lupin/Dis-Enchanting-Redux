@@ -1,6 +1,17 @@
 package com.cursee.disenchanting_table.platform.services;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.function.BiFunction;
 
 public interface IPlatformHelper {
 
@@ -47,4 +58,8 @@ public interface IPlatformHelper {
      * Creates a CreativeModeTab.Builder in the loader-specified way.
      */
     CreativeModeTab.Builder tabBuilder();
+
+    <T extends BlockEntity> BlockEntityType<T> blockEntityType(BiFunction<BlockPos, BlockState, T> function, Block... validBlocks);
+
+    <T extends AbstractContainerMenu> MenuType<T> menuType(BiFunction<Integer, Inventory, T> function, FeatureFlagSet flags);
 }
