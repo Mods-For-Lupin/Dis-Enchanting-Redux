@@ -1,8 +1,6 @@
 package com.cursee.disenchanting_table;
 
-
 import com.cursee.disenchanting_table.core.registry.ModRegistryNeoForge;
-import com.cursee.disenchanting_table.platform.Services;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -24,10 +22,5 @@ public class DisEnchantingTableNeoForge {
         ModRegistryNeoForge.declare();
 
         if (FMLEnvironment.dist == Dist.CLIENT) new DisEnchantingTableClientNeoForge();
-
-        if (Services.PLATFORM.isDevelopmentEnvironment()) {
-
-            Constants.LOG.info("Hello from NeoForge initializer!");
-        }
     }
 }
