@@ -2,11 +2,15 @@ package com.cursee.disenchanting_table;
 
 import com.cursee.disenchanting_table.core.registry.ModRegistryNeoForge;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.Event;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.javafmlmod.FMLModContainer;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+import java.util.function.Consumer;
 
 @Mod(Constants.MOD_ID)
 public class DisEnchantingTableNeoForge {
@@ -22,5 +26,7 @@ public class DisEnchantingTableNeoForge {
         ModRegistryNeoForge.declare();
 
         if (FMLEnvironment.dist == Dist.CLIENT) new DisEnchantingTableClientNeoForge();
+
+        eventBus.addListener((Consumer<ServerStartingEvent>) event -> DisEnchantingTableServer.createOrLoadConfiguration());
     }
 }

@@ -16,5 +16,7 @@ public class DisEnchantingTableClientFabric implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.DISENCHANTING_TABLE, DisEnchantingTableRenderer::new);
 
         MenuScreens.register(ModMenus.DISENCHANTING_TABLE, DisEnchantingTableScreen::new);
+
+        DisEnchantingTableClient.createOrLoadConfiguration();
     }
 }

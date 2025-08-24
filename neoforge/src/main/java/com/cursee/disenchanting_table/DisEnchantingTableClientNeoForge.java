@@ -21,5 +21,7 @@ public class DisEnchantingTableClientNeoForge {
         DisEnchantingTableNeoForge.eventBus.addListener((Consumer<RegisterMenuScreensEvent>) event -> {
             event.register(ModMenus.DISENCHANTING_TABLE, DisEnchantingTableScreen::new);
         });
+
+        DisEnchantingTableClient.createOrLoadConfiguration();
     }
 }

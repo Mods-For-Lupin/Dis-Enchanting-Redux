@@ -2,6 +2,7 @@ package com.cursee.disenchanting_table;
 
 import com.cursee.disenchanting_table.core.registry.ModRegistryForge;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,5 +22,7 @@ public class DisEnchantingTableForge {
         ModRegistryForge.declare();
 
         if (FMLEnvironment.dist == Dist.CLIENT) new DisEnchantingTableClientForge();
+
+        ServerStartingEvent.BUS.addListener(event -> DisEnchantingTableServer.createOrLoadConfiguration());
     }
 }

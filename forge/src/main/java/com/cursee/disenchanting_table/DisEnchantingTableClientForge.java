@@ -16,5 +16,7 @@ public class DisEnchantingTableClientForge {
         });
 
         MenuScreens.register(ModMenus.DISENCHANTING_TABLE, DisEnchantingTableScreen::new);
+
+        DisEnchantingTableClient.createOrLoadConfiguration();
     }
 }
