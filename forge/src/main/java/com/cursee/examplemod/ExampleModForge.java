@@ -1,5 +1,6 @@
 package com.cursee.examplemod;
 
+import com.cursee.examplemod.core.registry.ModRegistryForge;
 import com.cursee.examplemod.platform.Services;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
@@ -13,7 +14,10 @@ public class ExampleModForge {
     public ExampleModForge(FMLJavaModLoadingContext context) {
 
         ExampleModForge.busGroup = context.getModBusGroup();
+
         ExampleMod.init();
+
+        ModRegistryForge.declare();
 
         if (Services.PLATFORM.isDevelopmentEnvironment()) {
 

@@ -1,5 +1,6 @@
 package com.cursee.examplemod;
 
+import com.cursee.examplemod.core.registry.ModRegistryFabric;
 import com.cursee.examplemod.platform.Services;
 import net.fabricmc.api.ModInitializer;
 
@@ -9,6 +10,8 @@ public class ExampleModFabric implements ModInitializer {
     public void onInitialize() {
 
         ExampleMod.init();
+
+        ModRegistryFabric.declare();
 
         if (Services.PLATFORM.isDevelopmentEnvironment()) {
 

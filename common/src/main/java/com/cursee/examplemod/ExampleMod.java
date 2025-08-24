@@ -1,14 +1,11 @@
 package com.cursee.examplemod;
 
-import com.cursee.examplemod.core.registry.ModRegistry;
 import com.cursee.examplemod.platform.Services;
 import net.minecraft.resources.ResourceLocation;
 
 public class ExampleMod {
 
     public static void init() {
-
-        ModRegistry.declare();
 
         if (Services.PLATFORM.isDevelopmentEnvironment()) {
 
