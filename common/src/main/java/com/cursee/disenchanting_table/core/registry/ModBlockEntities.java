@@ -1,5 +1,7 @@
 package com.cursee.disenchanting_table.core.registry;
 
+import com.cursee.disenchanting_table.Constants;
+import com.cursee.disenchanting_table.DisEnchantingTable;
 import com.cursee.disenchanting_table.core.world.level.block.entity.DisEnchantingTableBlockEntity;
 import com.cursee.disenchanting_table.platform.Services;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +15,6 @@ public class ModBlockEntities {
     public static final BlockEntityType<DisEnchantingTableBlockEntity> DISENCHANTING_TABLE = Services.PLATFORM.blockEntityType(DisEnchantingTableBlockEntity::new, ModBlocks.DISENCHANTING_TABLE);
 
     public static void register(BiConsumer<BlockEntityType<?>, ResourceLocation> consumer) {
-
+        consumer.accept(DISENCHANTING_TABLE, DisEnchantingTable.identifier(Constants.MOD_ID));
     }
 }

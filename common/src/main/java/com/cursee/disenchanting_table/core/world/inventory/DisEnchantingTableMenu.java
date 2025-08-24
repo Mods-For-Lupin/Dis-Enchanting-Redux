@@ -16,11 +16,11 @@ public class DisEnchantingTableMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int i) {
-        return null;
+        return ItemStack.EMPTY;
     }
 
     @Override
     public boolean stillValid(Player player) {
-        return false;
+        return !player.isDeadOrDying();
     }
 }
