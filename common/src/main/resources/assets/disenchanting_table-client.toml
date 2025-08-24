@@ -1,10 +1,8 @@
-# Toggles particle effects from interacting with the Dis-Enchanting Table
+# Toggles particles spawned during disenchanting
 render_block_particles = true
 
-# Toggles the "Insufficient Experience" text rendering in the Dis-Enchanting Table's menu
+# Toggles the manual disenchanting "Insufficient Experience" display
 render_experience_cost = true
 
-# Toggles item rendering on the Dis-Enchanting Table in the game world.
-# This will either always display an enchanted book in manual mode, or display the currently processed
-# item if in automatic disenchanting mode.
+# Toggles the display of the currently disenchanted item on the table
 render_table_item = true

@@ -1,14 +1,17 @@
-# Determines if the Dis-Enchanting Table can be toggled into automatic mode
+# Disenchanting will occur automatically, taking XP from the nearest player
 automatic_disenchanting = false
 
-# Toggles whether dis-enchanting an item will reset its repair cost for anvils
+# How long (in ticks) until disenchanting occurs. 10 ticks = 0.5 seconds, 20 ticks = 1 second, etc.
+automatic_disenchanting_ticks = 10
+
+# Disenchanting an item will also reset its repair cost at anvils
 resets_repair_cost = true
 
-# Toggles whether dis-enchanting requires experience from players
+# If 'false', disenchanting will not remove experience from players
 requires_experience = true
 
-# Determines if player's must pay the experience cost with XP points or Levels. true = points, false = levels
+# If 'false', disenchanting will remove XP levels instead of points
 uses_points = true
 
-# How many XP points or levels should be deducted from the player when disenchanting?
+# The amount of XP points or levels removed from the player after disenchanting
 experience_cost = 25

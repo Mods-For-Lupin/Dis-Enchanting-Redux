@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "disenchanting_table:block/disenchanting_table"
+    },
+    "facing=east": {
+      "model": "disenchanting_table:block/disenchanting_table",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "disenchanting_table:block/disenchanting_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "disenchanting_table:block/disenchanting_table",
+      "y": 270
     }
   }
 }
