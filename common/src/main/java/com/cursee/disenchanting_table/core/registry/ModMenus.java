@@ -2,6 +2,7 @@ package com.cursee.disenchanting_table.core.registry;
 
 import com.cursee.disenchanting_table.Constants;
 import com.cursee.disenchanting_table.DisEnchantingTable;
+import com.cursee.disenchanting_table.core.world.inventory.DisEnchantingMenu;
 import com.cursee.disenchanting_table.core.world.inventory.DisEnchantingTableMenu;
 import com.cursee.disenchanting_table.platform.Services;
 import net.minecraft.resources.ResourceLocation;
@@ -13,9 +14,11 @@ import java.util.function.BiConsumer;
 
 public class ModMenus {
 
+    public static final MenuType<DisEnchantingMenu> DISENCHANTING_MENU = Services.PLATFORM.menuType(DisEnchantingMenu::new, FeatureFlags.VANILLA_SET);
     public static final MenuType<DisEnchantingTableMenu> DISENCHANTING_TABLE = Services.PLATFORM.menuType(DisEnchantingTableMenu::new, FeatureFlags.VANILLA_SET);
 
     public static void register(BiConsumer<MenuType<?>, ResourceLocation> consumer) {
+        consumer.accept(DISENCHANTING_MENU, DisEnchantingTable.identifier("disenchanting_menu"));
         consumer.accept(DISENCHANTING_TABLE, DisEnchantingTable.identifier(Constants.MOD_ID));
     }
 }

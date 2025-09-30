@@ -2,7 +2,10 @@ package com.cursee.disenchanting_table.client.gui.screens.inventory;
 
 import com.cursee.disenchanting_table.Constants;
 import com.cursee.disenchanting_table.DisEnchantingTable;
+import com.cursee.disenchanting_table.DisEnchantingTableClient;
+import com.cursee.disenchanting_table.core.world.block.entity.function.DisEnchantingStrategy;
 import com.cursee.disenchanting_table.core.world.inventory.DisEnchantingTableMenu;
+import com.cursee.disenchanting_table.platform.Services;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -28,10 +31,14 @@ public class DisEnchantingTableScreen extends AbstractContainerScreen<DisEnchant
 
         this.font = Minecraft.getInstance().font;
 
-        this.createToggleButton();
+        if (Services.PLATFORM.isDevelopmentEnvironment()) this.createToggleButton();
     }
 
     public void createToggleButton() {
+
+        if (!Services.PLATFORM.isDevelopmentEnvironment()) {
+            return;
+        }
 
         // todo validate against actual server mode
         Component currentMode = !automatic ? MANUAL_MODE_TEXT : AUTOMATIC_MODE_TEXT;
@@ -51,7 +58,7 @@ public class DisEnchantingTableScreen extends AbstractContainerScreen<DisEnchant
     @Override
     protected void rebuildWidgets() {
         super.rebuildWidgets();
-        this.createToggleButton();
+        if (Services.PLATFORM.isDevelopmentEnvironment()) this.createToggleButton();
     }
 
     @Override
@@ -74,6 +81,15 @@ public class DisEnchantingTableScreen extends AbstractContainerScreen<DisEnchant
 
 
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND, i, j, 0, 0, this.imageWidth, this.imageHeight, 256, 256);
+
+        if (DisEnchantingTableClient.render_experience_cost && !DisEnchantingStrategy.hasEnoughExperience(Minecraft.getInstance().player)) {
+            int textPadding = 4;
+            int xStart = this.leftPos + 45;
+            int yStart = this.topPos + 72;
+            Component text = Component.literal("Insufficient Experience!");
+            guiGraphics.fill(xStart, yStart, xStart + this.font.width(text) + 4, yStart + 11, -12242305);
+            guiGraphics.drawString(this.font, text, xStart + 2, yStart + 2, -40864);
+        }
 
         renderTooltip(guiGraphics, mouseX, mouseY);
     }

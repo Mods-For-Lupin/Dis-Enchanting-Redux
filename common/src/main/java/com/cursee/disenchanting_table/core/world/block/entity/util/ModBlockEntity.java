@@ -1,4 +1,4 @@
-package com.cursee.disenchanting_table.core.world.level.block.entity.base;
+package com.cursee.disenchanting_table.core.world.block.entity.util;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;

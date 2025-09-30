@@ -6,6 +6,7 @@ import net.neoforged.bus.api.Event;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.javafmlmod.FMLModContainer;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
@@ -26,8 +27,14 @@ public class DisEnchantingTableNeoForge {
 
         ModRegistryNeoForge.declare();
 
-        if (FMLEnvironment.dist == Dist.CLIENT) new DisEnchantingTableClientNeoForge();
+        // if (FMLEnvironment.getDist() == Dist.CLIENT) new DisEnchantingTableClientNeoForge();
+        if (dist == Dist.CLIENT) new DisEnchantingTableClientNeoForge();
+        // eventBus.addListener(this::onClientSetup);
 
         NeoForge.EVENT_BUS.addListener((Consumer<ServerStartingEvent>) event -> DisEnchantingTableServer.createOrLoadConfiguration());
+    }
+
+    public void onClientSetup(final FMLClientSetupEvent event) {
+        new DisEnchantingTableClientNeoForge();
     }
 }

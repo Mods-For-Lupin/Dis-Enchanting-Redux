@@ -1,10 +1,11 @@
-package com.cursee.disenchanting_table.core.world.level.block.entity.base;
+package com.cursee.disenchanting_table.core.world.block.entity.util;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;
 import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.ContainerUser;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -87,16 +88,26 @@ public abstract class ExposedSimpleInventoryBlockEntity extends SimpleInventoryB
 
     // SEPARATOR
 
+//    @Override
+//    public void startOpen(Player player) {
+//        this.getItemHandler().startOpen(player);
+//    }
+//
+//    @Override
+//    public void stopOpen(Player player) {
+//        this.getItemHandler().stopOpen(player);
+//    }
+
     @Override
-    public void startOpen(Player player) {
-        this.getItemHandler().startOpen(player);
+    public void startOpen(ContainerUser user) {
+        this.getItemHandler().startOpen(user);
     }
 
     @Override
-    public void stopOpen(Player player) {
-        this.getItemHandler().stopOpen(player);
+    public void stopOpen(ContainerUser user) {
+        this.getItemHandler().stopOpen(user);
     }
-    
+
     @Override
     public boolean stillValid(Player player) {
         return this.getItemHandler().stillValid(player);

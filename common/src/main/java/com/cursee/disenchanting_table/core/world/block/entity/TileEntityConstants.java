@@ -1,4 +1,4 @@
-package com.cursee.disenchanting_table.core.world.level.block.entity;
+package com.cursee.disenchanting_table.core.world.block.entity;
 
 public class TileEntityConstants {
 

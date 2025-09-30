@@ -1,4 +1,4 @@
-package com.cursee.disenchanting_table.core.world.level.block.entity.base;
+package com.cursee.disenchanting_table.core.world.block.entity.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;

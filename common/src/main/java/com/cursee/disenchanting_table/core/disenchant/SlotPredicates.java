@@ -1,6 +1,6 @@
 package com.cursee.disenchanting_table.core.disenchant;
 
-import com.cursee.disenchanting_table.core.world.level.block.entity.TileEntityConstants;
+import com.cursee.disenchanting_table.core.world.block.entity.TileEntityConstants;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 

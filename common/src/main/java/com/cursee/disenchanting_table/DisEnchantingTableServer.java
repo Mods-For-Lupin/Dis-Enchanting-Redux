@@ -8,6 +8,7 @@ import java.io.*;
 public class DisEnchantingTableServer {
 
     public static boolean automatic_disenchanting = false;
+    public static int automatic_disenchanting_ticks = 10;
 
     public static boolean resets_repair_cost = true;
 
@@ -54,6 +55,7 @@ public class DisEnchantingTableServer {
             Toml toml = new Toml().read(configFile);
 
             automatic_disenchanting = toml.getBoolean("automatic_disenchanting");
+            automatic_disenchanting_ticks = Math.toIntExact(toml.getLong("automatic_disenchanting_ticks", (long)automatic_disenchanting_ticks));
             resets_repair_cost = toml.getBoolean("resets_repair_cost");
             requires_experience = toml.getBoolean("requires_experience");
             uses_points = toml.getBoolean("uses_points");

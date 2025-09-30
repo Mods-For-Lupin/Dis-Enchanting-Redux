@@ -2,10 +2,9 @@ package com.cursee.disenchanting_table.core.registry;
 
 import com.cursee.disenchanting_table.Constants;
 import com.cursee.disenchanting_table.DisEnchantingTable;
-import com.cursee.disenchanting_table.core.world.level.block.entity.DisEnchantingTableBlockEntity;
+import com.cursee.disenchanting_table.core.world.block.entity.DisEnchantingTableBlockEntity;
 import com.cursee.disenchanting_table.platform.Services;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import java.util.function.BiConsumer;
