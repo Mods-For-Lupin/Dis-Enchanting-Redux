@@ -42,7 +42,7 @@ dependencies {
     compileOnly 'com.google.auto.service:auto-service:1.0.1'
     annotationProcessor 'com.google.auto.service:auto-service:1.0.1'
     // implementation "curse.maven:monolib-968432:6865016"
-    implementation "maven.modrinth:monolib:neoforge-1.21.8-3.0.2"
+    implementation "maven.modrinth:monolib:neoforge-1.21.9-3.1.0"
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }

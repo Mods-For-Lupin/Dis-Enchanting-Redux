@@ -1,13 +1,13 @@
 package com.cursee.disenchanting_table;
 
-import com.cursee.monolib.core.sailing.Sailing;
+import com.cursee.monolib.api.common.sailing.SailingApi;
 import net.minecraft.resources.ResourceLocation;
 
 public class DisEnchantingTable {
 
     public static void init() {
 
-        Sailing.register(Constants.MOD_ID, Constants.MOD_NAME, Constants.MOD_VERSION, Constants.MOD_PUBLISHER, Constants.MOD_URL);
+        SailingApi.register(Constants.MOD_ID, Constants.MOD_NAME, Constants.MOD_VERSION, Constants.MOD_PUBLISHER, Constants.MOD_URL);
 
         DisEnchantingTableServer.createOrLoadConfiguration(); // pre-load configuration, so all config files exist
     }

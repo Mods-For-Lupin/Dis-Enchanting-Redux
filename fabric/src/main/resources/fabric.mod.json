@@ -31,7 +31,7 @@
         "fabric-api": "*",
         "minecraft": "~${minecraft_version}",
         "java": ">=${java_version}",
-        "monolib": ">=3.0.2"
+        "monolib": ">=3.1.0"
     },
     "suggests": {
         "another-mod": "*"
