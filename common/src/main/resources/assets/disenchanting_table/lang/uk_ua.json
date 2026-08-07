@@ -1,0 +1,8 @@
+{
+  "itemGroup.disenchantingTable": "Стіл розчаровування",
+  "block.disenchanting_table.disenchanting_table": "Стіл розчаровування",
+  "item.disenchanting_table.disenchanting_table": "Стіл розчаровування",
+
+  "text.disenchanting_table.manual_mode": "РЕЖИМ: РУЧНИЙ -> АВТОМАТИЧНИЙ",
+  "text.disenchanting_table.automatic_mode": "РЕЖИМ: АВТОМАТИЧНИЙ -> РУЧНИЙ"
+}
